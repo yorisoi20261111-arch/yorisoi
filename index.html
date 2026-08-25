@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>YORISOI - 寄り添い、支え合うライバー事務所</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #FDF7EC; /* 画像の背景と同じ優しいアイボリー */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        /* 画面いっぱいに画像を配置するコンテナ */
+        .lp-container {
+            width: 100%;
+            max-width: 450px; /* スマホに最適な横幅 */
+            position: relative;
+        }
+
+        /* 画像をそのままベタ貼り（余白や外枠なし） */
+        .base-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* 画像の上に透明なボタンを重ねるためのレイヤー */
+        .interactive-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 共通：タップできる透明な領域 */
+        .clickable-area {
+            position: absolute;
+            display: block;
+            text-decoration: none;
+            cursor: pointer;
+            /* background-color: rgba(255, 0, 0, 0.3); */ /* 👈ここを消すと、ボタンの位置が赤く見えて調整しやすくなります */
+        }
+
+        /* ① 右上「無料で相談してみる」ボタンの位置 */
+        .btn-top-cta {
+            top: 1.0%;
+            right: 17%;
+            width: 37%;
+            height: 2.2%;
+            border-radius: 20px;
+        }
+
+        /* ② 中央下部「まずは無料で相談してみる」の大きなボタンの位置 */
+        .btn-main-cta {
+            bottom: 7.7%;
+            left: 10%;
+            width: 80%;
+            height: 3.5%;
+            border-radius: 35px;
+        }
+
+        /* ③ フッターリンク1：はじめての方へ */
+        .link-footer-1 {
+            bottom: 1.5%;
+            left: 0;
+            width: 50%;
+            height: 2.5%;
+        }
+
+        /* ④ フッターリンク2：よくある質問 */
+        .link-footer-2 {
+            bottom: 1.5%;
+            left: 50%;
+            width: 50%;
+            height: 2.5%;
+        }
+
+        /* ⑤ フッターリンク3：配信の始め方 */
+        .link-footer-3 {
+            bottom: 0%;
+            left: 0;
+            width: 50%;
+            height: 2.5%;
+        }
+
+        /* ⑥ フッターリンク4：お問い合わせ */
+        .link-footer-4 {
+            bottom: 0%;
+            left: 50%;
+            width: 50%;
+            height: 2.5%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="lp-container">
+        
+        <!-- 完成画像をそのまま1枚ベタ貼り -->
+        <img src="hero.png" alt="YORISOI LP" class="base-image">
+
+        <!-- 画像の上のボタン位置に、透明なリンクを重ねる -->
+        <div class="interactive-layer">
+            
+            <!-- 各 href="ここ" にLINEの登録URLなどを入れてください -->
+            <a href="https://line.me..." class="clickable-area btn-top-cta" title="無料で相談してみる"></a>
+            <a href="https://line.me..." class="clickable-area btn-main-cta" title="まずは無料で相談してみる"></a>
+
+            <a href="#about" class="clickable-area link-footer-1" title="はじめての方へ"></a>
+            <a href="#faq" class="clickable-area link-footer-2" title="よくある質問"></a>
+            <a href="#how-to" class="clickable-area link-footer-3" title="配信の始め方"></a>
+            <a href="#contact" class="clickable-area link-footer-4" title="お問い合わせ"></a>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
